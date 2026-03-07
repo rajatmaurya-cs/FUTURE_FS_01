@@ -5,15 +5,17 @@ import Particle from "../Particle";
 
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
+import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
 
 
 pdfjs.GlobalWorkerOptions.workerSrc =
-  `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+  pdfWorker;
 
 function ResumeNew() {
 
   const [numPages, setNumPages] = useState(null);
   const [width, setWidth] = useState(window.innerWidth);
+  const [loadError, setLoadError] = useState(false);
   const pdf = "/Resume.pdf";
 
 
@@ -26,6 +28,7 @@ function ResumeNew() {
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
+    setLoadError(false);
   }
 
   return (
@@ -51,6 +54,7 @@ function ResumeNew() {
         <Document
           file={pdf}
           onLoadSuccess={onDocumentLoadSuccess}
+          onLoadError={() => setLoadError(true)}
           loading="Loading resume..."
         >
           {Array.from(new Array(numPages), (el, index) => (
@@ -63,6 +67,11 @@ function ResumeNew() {
           ))}
         </Document>
       </Row>
+      {loadError && (
+        <Row style={{ justifyContent: "center", marginTop: "8px" }}>
+          <p>Unable to preview resume. Please use the download button.</p>
+        </Row>
+      )}
 
     
 

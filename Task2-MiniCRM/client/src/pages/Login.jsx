@@ -5,8 +5,8 @@ import { KeyRound, Mail, AlertCircle } from 'lucide-react';
 import './Login.css'; // We'll create a specific CSS bit for the login centering
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('admin@demo.com');
+  const [password, setPassword] = useState('password123');
   const [error, setError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -61,8 +61,8 @@ const Login = () => {
                 type="email" 
                 className="form-input" 
                 placeholder="admin@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={"admin@demo.com"}
+                onChange={() => setEmail("admin@demo.com")}
               />
             </div>
           </div>
@@ -75,8 +75,8 @@ const Login = () => {
                 type="password" 
                 className="form-input" 
                 placeholder="••••••••"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={"password123"}
+                onChange={() => setPassword("password123")}
               />
             </div>
           </div>
@@ -90,6 +90,9 @@ const Login = () => {
           </button>
         </form>
       </div>
+
+      
+
     </div>
   );
 };

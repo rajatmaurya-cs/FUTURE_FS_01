@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: `https://futurefsbackend.vercel.app/api`,
+  baseURL: `${import.meta.env.VITE_BASE_URL}/api`
 });
 
 // Request interceptor to add the standard JWT config

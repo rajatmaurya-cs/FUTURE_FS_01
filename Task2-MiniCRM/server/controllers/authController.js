@@ -10,11 +10,16 @@ const generateToken = (id) => {
 
 
 export const authAdmin = async (req, res) => {
+  console.log("Entered in authAdmin");
   const { email, password } = req.body;
 
   try {
     const normalizedEmail = (email || '').trim().toLowerCase();
     const normalizedPassword = (password || '').trim();
+
+    console.log(normalizedEmail);
+
+    console.log(normalizedPassword);
 
     const admin = await Admin.findOne({ email: normalizedEmail });
 

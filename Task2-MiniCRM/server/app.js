@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
@@ -7,7 +8,7 @@ import connectDB from './config/db.js';
 dotenv.config();
 
 // Connect to database
-connectDB();
+await connectDB();
 
 const app = express();
 
@@ -20,7 +21,7 @@ import leadRoutes from './routes/leadRoutes.js';
 import dashboardRoutes from './routes/dashboardRoutes.js';
 
 // Routes
-console.log("app.js");
+
 app.use('/api/auth', authRoutes);
 
 app.use('/api/leads', leadRoutes);
@@ -29,6 +30,20 @@ app.use('/api/dashboard', dashboardRoutes);
 
 app.get('/', (req, res) => {
   res.send('API is running...');
+});
+
+app.get('/api/health', (req, res) => {
+  res.json({
+    ok: true,
+    mongo: {
+      readyState: mongoose.connection.readyState,
+      host: mongoose.connection.host || null,
+      name: mongoose.connection.name || null,
+    },
+    env: {
+      hasMongoUri: Boolean(process.env.MONGO_URI),
+    },
+  });
 });
 
 export default app;

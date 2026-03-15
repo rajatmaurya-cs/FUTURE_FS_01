@@ -13,14 +13,13 @@ export const authAdmin = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const admin = await Admin.findOne({ email });
+    const normalizedEmail = (email || '').trim().toLowerCase();
+    const normalizedPassword = (password || '').trim();
 
-    console.log("authadmin");
-
-    console.log(`${admin}.  ${password}`);
+    const admin = await Admin.findOne({ email: normalizedEmail });
 
     // Simple password check (no hashing)
-    if (admin && admin.password === password) {
+    if (admin && admin.password === normalizedPassword) {
       res.json({
         _id: admin._id,
         email: admin.email,
@@ -40,15 +39,18 @@ export const setupAdmin = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const adminExists = await Admin.findOne({ email });
+    const normalizedEmail = (email || '').trim().toLowerCase();
+    const normalizedPassword = (password || '').trim();
+
+    const adminExists = await Admin.findOne({ email: normalizedEmail });
 
     if (adminExists) {
       return res.status(400).json({ message: 'Admin already exists' });
     }
 
     const admin = await Admin.create({
-      email,
-      password, // stored as plain text
+      email: normalizedEmail,
+      password: normalizedPassword, // stored as plain text
     });
 
     if (admin) {

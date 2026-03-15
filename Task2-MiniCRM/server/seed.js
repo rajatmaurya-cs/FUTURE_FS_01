@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config({ path: path.join(__dirname, '.env') });
 
-const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/mini_crm';
+const mongoUri = process.env.MONGO_URI;
 
 const seedDatabase = async () => {
   try {

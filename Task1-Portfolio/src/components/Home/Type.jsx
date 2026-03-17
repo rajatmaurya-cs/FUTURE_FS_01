@@ -6,11 +6,9 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "Full Stack MERN Developer",
-          "Building Production-Grade Web Apps with AI Integration",
-          "Creator of Postify — AI-Powered Blogging Platform",
-          "Strong in DSA and Problem Solving",
-          "Exploring Scalable Systems and AI"
+         "Real World Experience",
+         "Trusted by Global Students",
+         "MSME Registered"
         ],
         autoStart: true,
         loop: true,

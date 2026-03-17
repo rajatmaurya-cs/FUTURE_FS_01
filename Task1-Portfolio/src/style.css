@@ -11,7 +11,7 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #4bd643;
 }
 
 .purple {
@@ -67,13 +67,13 @@ button:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: rgba(95, 214, 77, 0.959);
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(70, 212, 70, 0.911);
   border-radius: 12px;
 }
 
@@ -199,7 +199,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #40ce5c;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -286,12 +286,12 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: #3bcd3b;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  color: #57d763 !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
@@ -310,9 +310,18 @@ button:focus {
   }
 }
 
-.myAvtar {
-  justify-content: center !important;
-  padding-top: 9em !important;
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: transparent;
+  mix-blend-mode: multiply; /* try this */
+  background-color: whitesmoke;
+}
+
+.js-tilt-glare {
+  background: white !important;  /* override black */
 }
 
 @media (max-width: 767px) {
@@ -384,13 +393,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px #46c257;
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: #50d56a;
+  box-shadow: 0 0 5px #35bc3c;
+  text-shadow: 0 0 2px #3bda3b;
 }
 
 .social-icons {
@@ -444,7 +453,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #a588c0 !important;
+  color: #49ce3f !important;
 }
 /* --------- */
 /* Projects */
@@ -506,7 +515,7 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  box-shadow: 0 3px 3px 5px rgba(71, 193, 97, 0.65) !important;
 }
 
 .card-img-top {
@@ -523,14 +532,14 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
+  background-color: #19d222 !important;
+  border-color: #368639 !important;
 }
 
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  background-color: #33c520d7 !important;
+  border-color: #20c523d7 !important;
 }
 .btn:focus {
   outline: none !important;
@@ -577,7 +586,7 @@ button:focus {
   color: white;
   opacity: 0.95;
 
-  outline: 1.7px solid rgba(200, 137, 230, 0.6);
+  outline: 1.7px solid rgba(56, 170, 65, 0.6);
   box-shadow: 0px 6px 18px rgba(89, 4, 168, 0.15);
 
   transition: all 0.3s ease;
@@ -602,10 +611,10 @@ button:focus {
 .tech-icons:hover {
   transform: translateY(-6px) scale(1.05);
 
-  outline: 2px solid rgba(197, 115, 230, 0.9);
+  outline: 2px solid rgba(70, 181, 53, 0.9);
 
   box-shadow: 
-    0 10px 25px rgba(197, 115, 230, 0.25),
+    0 10px 25px rgba(138, 230, 115, 0.25),
     0 0 18px rgba(197, 115, 230, 0.15);
 }
 
@@ -729,7 +738,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #8a49a8;
+  border: 2px solid #5ad452;
 }
 /* 🔥 Center the PDF perfectly */
 .react-pdf__Document {
@@ -741,7 +750,7 @@ button:focus {
 /* 🔥 Give spacing between pages */
 .react-pdf__Page {
   margin-bottom: 25px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5); /* premium look */
+  box-shadow: 0 8px 30px rgba(39, 211, 73, 0.5); /* premium look */
 }
 
 /* 🔥 Remove ugly annotation borders */
@@ -767,8 +776,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #5fd34d86 !important;
+  border-color: #4dd35686 !important;
 }
 
 .animate-like {
@@ -792,7 +801,7 @@ button:focus {
 
 .fork-btn-inner {
   line-height: 1.4em !important;
-  background-color: #934cce5e !important;
+  background-color: #4cce595e !important;
   padding: 0.25rem 1.1rem !important;
   vertical-align: middle !important;
   text-align: center !important;
@@ -800,8 +809,8 @@ button:focus {
 
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #4dd37786 !important;
+  border-color: #54d34d86 !important;
 }
 .fork-btn-inner::after {
   display: none !important;
@@ -822,11 +831,11 @@ button:focus {
 
   border-radius: 50%; /* makes it circular */
 
-  border: 4px solid rgba(138, 43, 226, 0.6);
+  border: 4px solid rgba(52, 226, 43, 0.6);
 
   box-shadow:
-      0 0 25px rgba(138,43,226,0.6),
-      0 0 60px rgba(138,43,226,0.4);
+      0 0 25px rgba(43, 226, 73, 0.6),
+      0 0 60px rgba(43, 226, 67, 0.4);
 
   transition: all 0.4s ease-in-out;
 }
@@ -835,8 +844,8 @@ button:focus {
 .profile-img:hover{
   transform: scale(1.05);
   box-shadow:
-      0 0 35px rgba(138,43,226,0.9),
-      0 0 80px rgba(138,43,226,0.6);
+      0 0 35px rgba(43, 226, 76, 0.9),
+      0 0 80px rgba(43, 226, 83, 0.6);
 }
 .project-title {
   font-size: 1.5rem;
@@ -848,3 +857,10 @@ button:focus {
 }
 
 
+.white-bg {
+  background-color: white;
+  padding: 20px;        /* spacing */
+  border-radius: 12px;  /* smooth UI */
+  display: inline-block;
+  border-radius: 50%;
+}

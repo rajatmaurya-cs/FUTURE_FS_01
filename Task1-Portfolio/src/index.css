@@ -1,11 +1,20 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); */
+@import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit&family=PT+Mono&display=swap");
+@theme {
+  --color-brand-primary: #16a34a;
+  --color-brand-dark: #ffffff;
+  --color-brand-light: #1a1a2e;
+  --color-brand-muted: #f0fdf4;
+  --color-brand-surface: #f8faf9;
+  --color-brand-border: #e2e8f0;
+}
 
-body {
-  margin: 0;
-  font-family: "PT Mono", monospace !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+@layer base {
+  body {
+    @apply bg-brand-dark text-brand-light antialiased;
+    font-family: "Inter", "Outfit", sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }

@@ -1,66 +1,76 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
-import myimg from "../../Assets/myImg.jpg"
 import Tilt from "react-parallax-tilt";
-
+import { motion } from "framer-motion";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
-      <Container>
-        <Row>
-          
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
-            </h1>
-            <p className="home-about-body">
-              I’m a passionate Software Engineer and Computer Science undergraduate who enjoys turning ideas into efficient, scalable, and real-world solutions. Over time, I’ve explored multiple technologies and developed a strong interest in problem-solving, system design, and building impactful applications.
-              <br />
-              <br />
-              I’m proficient in
-              <i>
-                <b className="purple">
-                  {" "}
-                  C, C++, JavaScript, Tailwind CSS, React.js, Express.js, Node.js, MongoDB{" "}
-                </b>
-              </i>
-              and enjoy working across both backend and frontend stacks.
-              <br />
-              <br />
-              My key areas of interest include developing
-              <i>
-                <b className="purple">
-                  {" "}
-                  scalable web applications, RESTful APIs, and modern full-stack systems{" "}
-                </b>
-              </i>
-              while continuously strengthening my core computer science fundamentals.
-              <br />
-              <br />
-              Whenever possible, I love building projects with
-              <b className="purple"> Node.js </b> and modern frameworks like{" "}
-              <i>
-                <b className="purple">React.js</b>{" "}
+    <div id="about" className="relative z-10 container mx-auto px-6 py-24 md:py-32 border-t border-brand-border">
+      <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        
+        <motion.div 
+          className="w-full lg:w-2/3"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-light mb-8 tracking-tight">
+            ABOUT <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-green-400">FUTURE INTERNS</span>
+          </h2>
 
-              </i>
+          <div className="space-y-6 text-lg text-brand-light/70 leading-relaxed font-light">
+            <p>
+              At <strong className="text-brand-light font-semibold">Future Interns</strong>, we are redefining how students and young professionals gain real-world experience through <em className="text-brand-primary font-medium not-italic">short-term, milestone-based internships</em>. Our mission is to make learning practical, accessible, and career-focused—empowering individuals from all backgrounds to build confidence, skills, and industry exposure from anywhere in the world.
             </p>
-          </Col>
+            
+            <p>
+              With <em className="text-brand-primary font-medium not-italic">ISO-certified programs, hands-on projects, and personalized mentorship</em>, we go beyond traditional internships. Whether you're looking to strengthen your resume, explore new domains, or gain verified credentials, Future Interns acts as your launchpad for professional growth.
+            </p>
+            
+            <div className="p-6 rounded-2xl bg-brand-muted border border-brand-primary/20 relative overflow-hidden group">
+              <div className="absolute inset-0 bg-brand-primary/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+              <p className="relative z-10 text-xl font-medium text-brand-light">
+                We proudly support a growing community of <span className="text-brand-primary font-bold">10,000+ interns</span> who are actively learning, building, and advancing in their careers.
+              </p>
+            </div>
 
-         
+            <p>
+              Beyond internships, we also deliver <em className="text-brand-primary font-medium not-italic">custom business solutions including data analytics, dashboards, web development, and AI-powered chatbot systems</em>. Our approach combines fresh talent with innovative thinking to create scalable and impactful digital solutions.
+            </p>
 
-          <Col md={4} className="myAvtar">
-            <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} glareEnable={true} glareMaxOpacity={0.2}>
-              <img src={myimg} className="img-fluid profile-img" alt="avatar" />
-            </Tilt>
-          </Col>
+            <p className="text-xl text-brand-light font-medium pt-4">
+              Whether you're here to learn, build, or collaborate— <span className="text-brand-primary font-bold">Future Interns</span> is your partner in shaping a smarter, future-ready world.
+            </p>
+          </div>
+        </motion.div>
 
-
-
-        </Row>
-      </Container>
-    </Container>
+        <motion.div 
+          className="w-full lg:w-1/3 flex justify-center lg:justify-end"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          <Tilt
+            tiltMaxAngleX={15}
+            tiltMaxAngleY={15}
+            scale={1.05}
+            transitionSpeed={2500}
+            className="w-full max-w-sm"
+          >
+            <div className="relative p-2 rounded-full overflow-hidden border border-brand-border shadow-[0_0_50px_rgba(22,163,74,0.15)]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/10 to-green-300/10" />
+              <img
+                src="https://futureinterns.com/wp-content/uploads/2025/05/cropped-cropped-Future-Interns-Site-Logo.png"
+                className="w-full h-auto rounded-full"
+                alt="Future Interns Avatar"
+              />
+            </div>
+          </Tilt>
+        </motion.div>
+      </div>
+    </div>
   );
 }
+
 export default Home2;

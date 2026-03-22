@@ -69,6 +69,36 @@ export default function Contact() {
               </div>
             ))}
 
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="bg-gold/10 border border-gold/20 rounded-lg p-4 text-center">
+                <p className="text-gold font-bold">Same Day</p>
+                <p className="text-gray-400 text-sm">Appointments</p>
+              </div>
+              <div className="bg-gold/10 border border-gold/20 rounded-lg p-4 text-center">
+                <p className="text-gold font-bold">Expert</p>
+                <p className="text-gray-400 text-sm">Barbers</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Map and CTA */}
+          <div className="space-y-6">
+            {/* Map Embed - Using placeholder */}
+            <div className="w-full h-96 rounded-xl overflow-hidden border border-gold/10 relative bg-dark-secondary">
+              <iframe
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                title="UrbanCuts Location"
+                src="https://maps.google.com/maps?q=Sri%20Vijaynagar%2C%20Sri%20Ganganagar%2C%20Rajasthan%20335704&z=15&output=embed"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="grayscale hover:grayscale-0 transition-all"
+              ></iframe>
+            </div>
+
 
 
 

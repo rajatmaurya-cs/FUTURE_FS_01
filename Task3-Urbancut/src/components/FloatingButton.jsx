@@ -8,10 +8,10 @@ export default function FloatingButton() {
 
   return (
     <div className="fixed bottom-6 right-6 z-40 font-sans">
-
+      {/* Floating Action Menu */}
       {isOpen && (
         <div className="absolute bottom-24 right-0 space-y-3 animate-fade-in">
- 
+          {/* Call Button */}
           <a
             href="tel:+916350624971"
             className="flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-lg shadow-lg transition-all transform hover:scale-105"
@@ -20,7 +20,8 @@ export default function FloatingButton() {
             <span className="font-semibold">Call Now</span>
           </a>
 
-            <a
+          {/* WhatsApp Button */}
+          <a
             href={`https://wa.me/916350624971?text=${encodeURIComponent(whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -31,3 +32,40 @@ export default function FloatingButton() {
             </svg>
             <span className="font-semibold">WhatsApp</span>
           </a>
+
+          {/* Message Button */}
+          <button
+            onClick={() => {
+              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })
+              setIsOpen(false)
+            }}
+            className="flex items-center gap-3 bg-gold text-black px-4 py-3 rounded-lg shadow-lg transition-all transform hover:scale-105 font-semibold"
+          >
+            <FiMessageSquare size={20} />
+            <span>Contact Form</span>
+          </button>
+        </div>
+      )}
+
+      {/* Main FAB */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center font-bold text-2xl transition-all transform hover:scale-110 ${
+          isOpen
+            ? 'bg-red-600 hover:bg-red-700 text-white'
+            : 'bg-gold hover:bg-yellow-300 text-black'
+        }`}
+        aria-label="Open contact menu"
+      >
+        {isOpen ? <FiX size={28} /> : <FiMessageCircle size={28} />}
+      </button>
+
+      {/* Floating Label */}
+      {!isOpen && (
+        <div className="absolute bottom-20 right-0 bg-gold text-black px-4 py-2 rounded-lg shadow-lg text-sm font-semibold whitespace-nowrap animate-pulse">
+          Need Help? Chat with us! 👋
+        </div>
+      )}
+    </div>
+  )
+}

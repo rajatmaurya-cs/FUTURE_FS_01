@@ -30,7 +30,6 @@ export default function Contact() {
     }
   ]
 
-
   return (
     <section id="contact" className="py-20 bg-dark-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,25 +98,22 @@ export default function Contact() {
               ></iframe>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            {/* Booking CTA */}
+            <div className="bg-gradient-to-r from-gold/20 to-gold/10 border-2 border-gold/30 rounded-xl p-8 text-center">
+              <h3 className="text-2xl font-bold mb-4">Ready to Look Sharp?</h3>
+              <p className="text-gray-300 mb-6">Book your appointment now and experience premium grooming</p>
+              <a
+                href="https://wa.me/916350624971?text=Hi%20I%20want%20to%20book%20an%20appointment%20at%20UrbanCuts"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-block"
+              >
+                Book via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -18,7 +18,7 @@ function Footer() {
           </span>
 
           <a
-            href="https://rajat-dev.vercel.app"
+            href="https://portfolio-site-kappa-lilac.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-green-500 hover:scale-110 transition-transform"

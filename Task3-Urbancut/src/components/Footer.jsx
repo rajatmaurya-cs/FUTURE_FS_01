@@ -71,3 +71,21 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+           <div>
+            <h4 className="text-lg font-bold text-gold mb-6 flex items-center gap-2">
+              <FiClock size={20} /> Hours
+            </h4>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li>
+                <span className="font-semibold">Monday - Sunday</span>
+                <p>10:00 AM - 8:00 PM</p>
+              </li>
+              <li>
+                <span className="font-semibold">Closed</span>
+                <p>Monday (Weekly off)</p>
+              </li>
+              <li className="bg-gold/10 border border-gold/20 rounded-lg p-3 mt-4">
+                <p className="text-gold font-semibold">Walk-ins Welcome!</p>
+              </li>
+            </ul>

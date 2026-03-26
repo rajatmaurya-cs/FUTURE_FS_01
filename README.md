@@ -76,8 +76,8 @@ This repository contains all the projects I built during my **Full Stack Develop
 
 If you'd like to collaborate or have any opportunities:
 
-- 💼 LinkedIn: *(Add your link here)*  
-- 📧 Email: *(Add your email here)*  
+- 💼 LinkedIn: https://www.linkedin.com/in/rajat-maurya-3a172331b 
+- 📧 Email: rajatmaurya.dev@gmail.com 
 
 ---
 
